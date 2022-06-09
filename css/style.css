@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  text-align: center;
+  font-family: Tahoma;
+  animation: rgb 3s infinite alternate;
+}
+
+@keyframes rgb {
+  30% {
+    color: red;
+  }
+  60% {
+    color: green;
+  }
+  100% {
+    color: blue;
+  }
+}
+
+.colorpicker-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.colorpicker-container input {
+  text-align: center;
+  margin: 10px;
+  font-family: "Roboto Mono", monospace;
+}
+
+.colorpicker-container img {
+  width: 35px;
+  transform: translateY(12px);
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: aliceblue;
+  box-shadow: 5px 5px 5px rgba(70, 70, 70, 0.5);
+  cursor: pointer;
+}
+
+.colorpicker-container img:active {
+  box-shadow: inset 5px 5px 5px rgba(70, 70, 70, 0.5);
+}
+
+.colorpicker-container input::placeholder {
+  font-size: 1.2rem;
+}
+
+.colorpicker-container input:focus::placeholder {
+  visibility: hidden;
+}
+
+.colorpicker-container #rgb-hex {
+  display: inline-block;
+  margin: 0 auto;
+  margin-left: 10px;
+}
+
+.colorpicker-container #rgb-hex2 {
+  display: inline-block;
+  transform: translateX(10px);
+}
+
+.colorpicker-container input[readonly] {
+  display: inline-block;
+  margin: 0 auto;
+  margin-left: 10px;
+}
+
+.colorpicker-container input[type="text"] {
+  display: block;
+  margin: 0 auto;
+}
+
+.colorpicker-container .s-rgb {
+  margin-top: 50px;
+}
+
+.colorpicker-container #events {
+  cursor: pointer;
+}
+
+#events + .f-rgb {
+  margin-top: 80px;
+}
+
+.btn-container {
+  display: inline-block;
+  position: absolute;
+  transform: translate(-60px, 25px);
+}
+
+#btn {
+  font-size: 1.5rem;
+  color: crimson;
+  transition-duration: 0.5s;
+  display: none;
+  font-family: monospace;
+}
+
+#btn:hover {
+  background-color: beige;
+  transition: all 0.5s ease-in-out;
+}
+
+#reset {
+  font-family: monospace;
+  color: whitesmoke;
+  background-color: darkred;
+  font-size: 1.5rem;
+}
+
+#display-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 300px;
+  color: darkgray;
+  text-shadow: 5px 10px 15px orangered;
+  font-size: 1.5rem;
+  font-family: Arial;
+}
+
+#display-container .rgb-res {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 250px;
+  font-size: 2rem;
+}
+
+#display-container .rgb-res2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 250px;
+  font-size: 2rem;
+}
